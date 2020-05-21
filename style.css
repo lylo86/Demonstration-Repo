@@ -1,0 +1,212 @@
+.container {
+    border: 5px dashed rgb(224, 121, 24);
+    background-color: lightcyan;
+    margin: 50px 20px;
+    padding: 50px 50px;
+}
+
+.box {
+    background-color: lightpink;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+
+@keyframes fadeMe {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+#box1 {
+    animation-name: fadeMe;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate (90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#box2 {
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    border-radius: 10%;
+    background-image: radial-gradient(circle, yellow, red);
+}
+
+@keyframes getBigger {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#box3 {
+    animation: getBigger 3s infinite linear;
+    border-radius: 50%;
+    background-color: turquoise;
+}
+
+@keyframes changeColors {
+    0% {
+        background-color: teal;
+    }
+    25% {
+        background-color: rgb(204, 177, 57);
+    }
+    50% {
+        background-color: rgb(200, 19, 206);
+    }
+    75% {
+        background-color: rgb(120, 202, 12);
+    }
+    100% {
+        background-color: rgb(219, 121, 40);
+    }
+}
+
+#box4 {
+    animation: changeColors 5s 2s forwards;
+}
+
+@keyframes moveBox {
+    0% {left: 0px; top:0px;}
+    25% {left: 100px; top:0px;}
+    50% {left: 100px; top:200px;}
+    75% {left: 0px; top:200px;}
+    100% {left: 0px; top:0px;}
+}
+
+#box5 {
+    position: relative;
+    animation: moveBox 5s infinite;
+    background-color: brown;
+}
+
+#box6 {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    justify-content: space-around;
+}
+
+nav {
+    background-color: lightsteelblue;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px;
+
+}
+li a {
+    text-decoration: none;
+}
+
+.pic {
+    border-radius: 50%;
+    box-shadow: 8px 8px 8px rgb(70, 70, 70);
+}
+h1 {
+    text-shadow: 4px 4px 1px rgb(132, 131, 133);
+}
+
+form input, textarea, button {
+    display: block;
+    margin: 10px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 200px ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: burlywood;
+    color: #444;
+}
+
+.Box {
+    background-color:burlywood;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+}
+
+.a {
+    grid-column: col / span  2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.b {
+    grid-column: col 4 / span  2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.c {
+    grid-column: col / span 5;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to top, pink, yellow, brown, teal);
+}
+.d {
+    grid-column: col 1 / span 3;
+    grid-row: row 3 ;
+    display: flex;
+    justify-content: center;
+}
+
+.e {
+    grid-column: col 3 / span 3;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+}
+
+.f {
+    grid-column: col 2 / span 3 ;
+    grid-row: row 2  ;
+    background-color: rgba(201, 214, 9, 0.678);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+}
